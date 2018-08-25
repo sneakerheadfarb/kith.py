@@ -9,7 +9,7 @@ found = "false"
 
 while found == "false":
 	print("LOOKING FOR PRODUCT!")
-	d = feedparser.parse('https://kith.com/collections/footwear.atom')
+	d = feedparser.parse('https://kith.com/collections/footwear.atom?limit=50')
 	count = 0
 	products = len(d['entries'])
 	print("Number of products found: " + products)
