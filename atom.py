@@ -12,7 +12,7 @@ while found == "false":
 	d = feedparser.parse('https://kith.com/collections/footwear.atom')
 	count = 0
 	products = len(d['entries'])
-	print("Number of products found:" + products)
+	print("Number of products found: " + products)
 	while count < products:
 		title = d['entries'][count]['title']
 		if keyword in title:
