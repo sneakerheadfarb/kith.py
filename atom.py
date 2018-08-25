@@ -3,7 +3,7 @@ import feedparser
 import json
 
 url = "https://kith.com/"
-keyword = "test"
+keyword = "Nike"
 size_input = "7"
 found = "false"
 
@@ -12,6 +12,7 @@ while found == "false":
 	d = feedparser.parse('https://kith.com/collections/footwear.atom')
 	count = 0
 	products = len(d['entries'])
+	print("Number of products found:" + products)
 	while count < products:
 		title = d['entries'][count]['title']
 		if keyword in title:
